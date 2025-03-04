@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function useState01() {
+export default function UseState01() {
   const [state, setState] = useState(0);
   const [error, setError] = useState('');
   const calc = (calcType: string) => {
