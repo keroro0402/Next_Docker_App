@@ -7,6 +7,9 @@ export default function Home() {
       <p>
         <Link href={'./'}>Home</Link>
       </p>
+      <p>
+        <Link href={'./01_useState'}>useState</Link>
+      </p>
     </>
   );
 }
