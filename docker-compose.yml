@@ -1,0 +1,37 @@
+# サービス名
+services:
+  #api側コンテナ設定
+  api:
+    # コンテナ名
+    container_name: api
+    #Dokerイメージのビルド設定
+    build: ./api
+    #ホストのポート:コンテナのポート
+    #ホスト8080番がコンテナの8080番に接続される
+    ports:
+      - 8080:8080
+    #bashが終了するのを防ぐ
+    tty: true
+    #ボリューム設定
+    # ./apiディレクトリをコンテナ内のworkspaceディレクトリにマウントし、cachedオプションを使用
+    volumes:
+      - ./api:/workspace:cached
+
+  #web側コンテナ設定
+  web:
+    # コンテナ名
+    container_name: web
+    #Dokerイメージのビルド設定
+    build: ./web
+    #ホストのポート:コンテナのポート
+    #ホスト3000番がコンテナの3000番に接続される
+    ports:
+      - 3000:3000
+    #bashが終了するのを防ぐ
+    tty: true
+    #ボリューム設定
+    # ./webディレクトリをコンテナ内のworkspaceディレクトリにマウントし、cachedオプションを使用
+    volumes:
+      - ./web:/workspace:cached
+    depends_on:
+      - api
