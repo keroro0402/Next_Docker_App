@@ -1,5 +1,6 @@
 import UseState01 from './components/useState01';
 import UseState02 from './components/useState02';
+import UseState03 from './components/useState03';
 import '../globals.css';
 export default function UseState() {
   return (
@@ -10,6 +11,9 @@ export default function UseState() {
       </div>
       <div className='card'>
         <UseState02 />
+      </div>
+      <div className='card'>
+        <UseState03 />
       </div>
     </>
   );
