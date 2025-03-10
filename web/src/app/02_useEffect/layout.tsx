@@ -7,7 +7,7 @@ interface SubLayoutProps {
 const SubLayout: React.FC<SubLayoutProps> = ({ children }) => {
   return (
     <>
-      <div>{children}</div>
+      <div className='m-1'>{children}</div>
     </>
   );
 };
