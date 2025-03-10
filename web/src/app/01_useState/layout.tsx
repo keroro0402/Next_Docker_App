@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import '../globals.css';
 
 interface SubLayoutProps {
   children: ReactNode;
@@ -8,7 +7,7 @@ interface SubLayoutProps {
 const SubLayout: React.FC<SubLayoutProps> = ({ children }) => {
   return (
     <>
-      <div className='m-1'>{children}</div>
+      <div>{children}</div>
     </>
   );
 };
