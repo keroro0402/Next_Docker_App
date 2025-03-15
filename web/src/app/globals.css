@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+details,
+button {
+  cursor: pointer;
+}
 .card {
   border: 2px solid red;
   padding: 10px;
