@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+details,
+button {
+  cursor: pointer;
+}
 .card {
   border: 2px solid red;
   padding: 10px;
@@ -29,4 +33,11 @@ a {
 
 .m-1 {
   margin: 1rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+.fs_small {
+  font-size: 0.8rem;
 }
