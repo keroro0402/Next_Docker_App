@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { LIMITTIME, ONESECOND } from '../consts';
+import { LIMITTIME, DEFAULTLOADTIME } from '../consts';
 
 export default function NotFound() {
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function NotFound() {
     }
     intervalId = setInterval(() => {
       setState((prev) => {
-        return prev - ONESECOND;
+        return prev - DEFAULTLOADTIME;
       });
     }, 1000);
     // クリーンアップ処理
@@ -28,7 +28,7 @@ export default function NotFound() {
     <>
       <h2>404 : Not Found</h2>
       <p>指定されたURLは存在しません</p>
-      <p>{state / ONESECOND}秒後にTOPページにリダイレクトします</p>
+      <p>{state / DEFAULTLOADTIME}秒後にTOPページにリダイレクトします</p>
     </>
   );
 }
