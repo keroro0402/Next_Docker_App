@@ -41,3 +41,6 @@ button {
 .fs_small {
   font-size: 0.8rem;
 }
+.width_large {
+  width: 90%;
+}
