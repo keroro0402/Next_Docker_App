@@ -13,6 +13,9 @@ export default function Home() {
       <p>
         <Link href={'./02_useEffect'}>useEffect</Link>
       </p>
+      <p>
+        <Link href={'./03_useReducer'}>useReducer</Link>
+      </p>
     </>
   );
 }
