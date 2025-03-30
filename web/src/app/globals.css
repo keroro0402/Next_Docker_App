@@ -44,3 +44,7 @@ button {
 .width_large {
   width: 90%;
 }
+
+.selected {
+  background: rgb(160, 193, 232);
+}
