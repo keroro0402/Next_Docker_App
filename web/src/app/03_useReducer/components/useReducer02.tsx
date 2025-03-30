@@ -1,47 +1,68 @@
 'use client';
-import React, { useReducer } from 'react';
-import { ARRAY1 } from '@/app/03_useReducer/components/';
+import React, { useReducer, useState, Fragment, useEffect } from 'react';
+import { ARRAY1 } from '@/app/03_useReducer/data/array';
+import { Obj } from '@/app/03_useReducer/data/index';
+
 type Action = {
-  type: 'selectFruit';
-  payload: string;
+  type: 'りんご' | 'いちご' | 'みかん';
 };
 
-type Fruit = 'Apple' | 'Peach' | 'Banana';
-
-const UseReducer01 = () => {
-  const reducer = (prev: string, { type, payload }: Action) => {
+const UseReducer02 = () => {
+  const reducer = (prev: Obj[], { type }: Action) => {
     switch (type) {
-      case 'selectFruit':
-        return payload;
+      case 'りんご': {
+        const n = [...prev];
+        return n.map((item) => {
+          return item.name === 'りんご' ? { ...item, checked: !item.checked } : item;
+        });
+      }
+      case 'みかん': {
+        const n = [...prev];
+        return n.map((item) => {
+          return item.name === 'みかん' ? { ...item, checked: !item.checked } : item;
+        });
+      }
+      case 'いちご': {
+        const n = [...prev];
+        return n.map((item) => {
+          return item.name === 'いちご' ? { ...item, checked: !item.checked } : item;
+        });
+      }
       default:
         return prev;
     }
   };
-  const FruitsArray: Fruit[] = ['Apple', 'Peach', 'Banana'];
-  const [state, dispatch] = useReducer(reducer, FruitsArray[0]);
+
+  const [total, setTotal] = useState(0);
+  const [state, dispatch] = useReducer(reducer, ARRAY1);
+
   const handle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFruit = e.target.value as Fruit;
-    if (FruitsArray.includes(selectedFruit)) {
-      dispatch({ type: 'selectFruit', payload: e.target.value });
-    }
+    dispatch({ type: e.target.name as 'りんご' | 'いちご' | 'みかん' });
   };
+  useEffect(() => {
+    const totalAmount = state.filter((item) => item.checked).reduce((sum, item) => sum + item.price, 0);
+    setTotal(totalAmount);
+  }, [state]);
 
   return (
     <>
-      <p>ラジオボタンを操作</p>
-      {FruitsArray.map((item) => {
+      <p>複数のチェックボックスを操作</p>
+      {state.map((item: Obj) => {
         return (
-          <label htmlFor={item} key={item}>
-            <input type='radio' value={item} onChange={handle} checked={state === item} id={item} />
-            {item}
-          </label>
+          <Fragment key={item.id}>
+            <label htmlFor={`${item.id}`}>
+              <input type='checkbox' onChange={handle} name={item.name} value={item.price} checked={item.checked} id={`${item.id}`} />
+              {item.name} : {item.price}円
+            </label>
+            <br></br>
+          </Fragment>
         );
       })}
       <p>
-        <b>{state}</b>が選択されました
+        合計金額：<b>{total}</b>円
       </p>
     </>
   );
 };
 
-export default UseReducer01;
+export default UseReducer02;
