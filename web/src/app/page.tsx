@@ -16,6 +16,9 @@ export default function Home() {
       <p>
         <Link href={'./03_useReducer'}>useReducer</Link>
       </p>
+      <p>
+        <Link href={'./05_memo'}>memo</Link>
+      </p>
       <hr></hr>
       <p>
         <Link href={'./04_performance'}>performance</Link>

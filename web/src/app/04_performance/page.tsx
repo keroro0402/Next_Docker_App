@@ -1,13 +1,12 @@
+import Performance01 from '@/app/04_performance/components/performance01';
+
 export default function UseReducer() {
   return (
     <>
       <h2>performance</h2>
-      {/* <div className='card'>
-        <UseReducer02 />
-      </div>
       <div className='card'>
-        <UseReducer01 />
-      </div> */}
+        <Performance01 />
+      </div>
     </>
   );
 }
