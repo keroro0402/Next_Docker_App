@@ -1,6 +1,6 @@
 import Memo01 from '@/app/05_memo/components/memo01';
 
-export default function UseReducer() {
+export default function Memo() {
   return (
     <>
       <h2>memo</h2>
