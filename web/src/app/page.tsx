@@ -22,7 +22,9 @@ export default function Home() {
       <p>
         <Link href={'./06_useCallback'}>useCallback</Link>
       </p>
-
+      <p>
+        <Link href={'./07_useMemo'}>useMemo</Link>
+      </p>
       <hr></hr>
       <p>
         <Link href={'./04_performance'}>performance</Link>
