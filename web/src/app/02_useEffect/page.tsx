@@ -3,6 +3,7 @@ import UseEffect02 from '@/app/02_useEffect/components/useEffect02';
 import UseEffect03 from '@/app/02_useEffect/components/useEffect03';
 import UseEffect04 from '@/app/02_useEffect/components/useEffect04';
 import UseEffect05 from '@/app/02_useEffect/components/useEffect05';
+import UseEffect06 from '@/app/02_useEffect/components/useEffect06';
 
 const useEffect = () => {
   return (
@@ -19,6 +20,9 @@ const useEffect = () => {
           <li>サーバーとの通信や、外部のライブラリとのインタラクション</li>
         </ul>
       </details>
+      <div className='card'>
+        <UseEffect06 />
+      </div>
       <div className='card'>
         <UseEffect05 />
       </div>
