@@ -17,6 +17,9 @@ export default function Home() {
         <Link href={'./03_useReducer'}>useReducer</Link>
       </p>
       <p>
+        <Link href={'./08_useContext'}>useContext</Link>
+      </p>
+      <p>
         <Link href={'./05_memo'}>memo</Link>
       </p>
       <p>
