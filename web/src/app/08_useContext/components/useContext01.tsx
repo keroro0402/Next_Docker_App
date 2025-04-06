@@ -8,7 +8,7 @@ const UseContext01 = () => {
   const props = 'こんにちは';
   return (
     <>
-      <p>共通データをContextから読み込む</p>
+      <p>文字列データをContextから読み込む</p>
       <p>context : {contextValue}</p>
       <p>props : {props}</p>
       <Child01 props={props} />
