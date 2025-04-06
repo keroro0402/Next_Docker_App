@@ -72,3 +72,39 @@ button {
 .selected {
   background: rgb(160, 193, 232);
 }
+
+.blue01 {
+  background-color: rgb(143, 167, 223);
+  color: white;
+  padding: 5px;
+}
+
+.blue02 {
+  background-color: rgb(35, 61, 122);
+  color: white;
+  padding: 10px;
+}
+
+.red01 {
+  background-color: rgb(223, 143, 143);
+  color: white;
+  padding: 5px;
+}
+
+.red02 {
+  background-color: rgb(122, 35, 35);
+  color: white;
+  padding: 10px;
+}
+
+.dark01 {
+  background-color: rgb(140, 134, 134);
+  color: white;
+  padding: 5px;
+}
+
+.dark02 {
+  background-color: rgb(58, 54, 54);
+  color: white;
+  padding: 10px;
+}
